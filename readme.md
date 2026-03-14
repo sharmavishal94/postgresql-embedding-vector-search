@@ -1,5 +1,7 @@
 # PostgreSQL + Ollama Movie Embeddings
 
+Status - In-Progress
+
 This project fetches movie records from a PostgreSQL database, generates text embeddings for their titles and descriptions using a local LLM via Ollama, and saves the embeddings back into the database using the `pgvector` extension.
 
 ## 🛠️ Prerequisites
@@ -22,6 +24,8 @@ CREATE EXTENSION IF NOT EXISTS vector;
 
 -- Add the embedding column to the table
 ALTER TABLE omdb.movies ADD COLUMN IF NOT EXISTS movie_embedding vector(1024);
+
+Note - I am using movie data set from just-use-postgres-book - https://github.com/dmagda/just-use-postgres-book/blob/main/data/movie/omdb_movies_data.sql
 
 2. Install Python Dependencies
 Install the required Python packages for database connection and Ollama integration:
