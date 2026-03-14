@@ -5,7 +5,7 @@ import ollama
 DB_PARAMS = {
     "dbname": "postgres",           # <-- Check this too! Default is usually "postgres"
     "user": "postgres",             
-    "password": "password",  # <-- Put the password from Step 1 here
+    "password": "",  # <-- Put the password from Step 1 here
     "host": "localhost",
     "port": "5432"
 }
